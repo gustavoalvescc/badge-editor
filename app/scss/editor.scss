@@ -1,15 +1,22 @@
+.badge-canvas {
+  position:relative;
+}
+
 .badge-element-options {
     position:absolute;
-    visibility: hidden;
-    opacity: 0;
     top:0;
     transition: all .3s ease;
     left:50%;
-    transform: translatex(-50%);
+    transform: translate(-50%, -100%);
     display: flex;
     justify-content: center;
     align-items:center;
     z-index: 99;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -100%);
+    background:#efefef;
+    width:100%;
   }
 
   .badge-option {
@@ -23,14 +30,6 @@
 
   .badge-element-text:focus{
     cursor:text;
-  }
-
-
-  .badge-element:focus ~ .badge-element-options, .badge-element-options:hover {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(-50%, -100%);
-    background:#efefef;
   }
 
 .badge-canvas select {
@@ -53,13 +52,7 @@
 }
 
 
-.color-grid {
-  display: none;
-  z-index:99;
-}
-
-
-.color-grid-preview:focus + .color-grid, .color-grid:hover  {
+.color-grid  {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -68,13 +61,15 @@
   background: #FFF;
   border: 1px solid #efefef;
   box-shadow: 0 0 11px 0px #d8d8d8;
+  width: 110px;
+  position:absolute;
 }
 
 .color-grid-color-container{
-  height:24px; 
-  width:24px;
-  padding: 2px;
-  position: relative
+  height: 28px;
+  width: 28px;
+  padding: 4px;
+  position: relative;
 }
 
 
@@ -96,6 +91,13 @@
   display: none;
 }
 
-.color-grid input::checked +  {
+.color-grid input:checked + .color-grid-square {
   transform:scale(1.1)
+}
+
+.option-label {
+  display: block;
+  font-size: 13px;
+  font-family: sans-serif;
+  opacity: .7;
 }

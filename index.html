@@ -11,10 +11,10 @@
     <title>Hello, world!</title>
   </head>
   <body>
-      <div class="container">
+      <div class="container badge-canvas">
             <div class="badge-element-options">
                     <div class="badge-option">
-                      <label for="textTime">font-size:</label>
+                      <label for="textTime" class="option-label">font-size:</label>
                       <select id="textTime">
                                 <option>7px</option>
                                 <option> 8px</option>
@@ -40,12 +40,12 @@
                                 <option>56px</option>
                                 <option>64px</option>
                                 <option>72px</option>
-                            </select>
+                      </select>
                     </div>
                     <div class="badge-option">
-                        <label>color:</label>
+                        <label class="option-label">color:</label>
                         <button class="color-grid-preview" style="background:grey; width:50px; height:30px; cursor:pointer;"></button>
-                        <div class="color-grid" style="position:absolute; width:100px;">
+                        <div class="color-grid" style="">
                           <label class="color-grid-color-container" contenteditable="false"><input type="radio" name="color-grid"><div class="color-grid-square" style="background:white"></div></label>
                           <label class="color-grid-color-container" contenteditable="false"><input type="radio" name="color-grid"><div class="color-grid-square" style="background:grey"></div></label>
                           <label class="color-grid-color-container" contenteditable="false"><input type="radio" name="color-grid"><div class="color-grid-square" style="background:black"></div></label>
@@ -64,23 +64,23 @@
                     </div>
           </div>
         
-        <div class="draggable drag-image" data-eltype="object">
+        <div class="badge-element draggable drag-image" data-eltype="object">
             <img src="https://profile.actionsprout.com/default.jpeg" />
         </div>
-        <div class="draggable drag-text" contenteditable data-eltype="text">
+        <div class="badge-element draggable drag-text" contenteditable data-eltype="text">
             <span>
                 #first-name#
             </span>
         </div>
-        <div class="draggable drag-text" contenteditable data-eltype="text">
+        <div class="badge-element draggable drag-text" contenteditable data-eltype="text">
             <span>
                 #last-name#
             </span>
         </div>
-        <div class="draggable drag-qrcode" data-eltype="object">
+        <div class="badge-element draggable drag-qrcode" data-eltype="object">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png" />
         </div>
-        <div class="draggable drag-square" data-eltype="object">
+        <div class="badge-element draggable drag-square" data-eltype="object">
       </div>
 
     <script src="node_modules/interactjs/dist/interact.min.js"></script>
