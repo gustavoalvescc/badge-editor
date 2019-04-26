@@ -1,0 +1,11 @@
+{
+  "name": "badge-editor",
+  "version": "1.0.0",
+  "main": "index.html",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "interactjs": "^1.4.0-rc.13"
+  }
+}

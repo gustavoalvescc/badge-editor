@@ -1,0 +1,84 @@
+.container{
+    width: 420px;
+    margin: 0 auto;
+    .container-drop{
+        border: 5px dashed #ccc;
+        border-radius: 4px;
+    }
+}
+
+  .dropzone {
+    transition: background-color 0.3s;
+    height: 260px;
+    border-radius: 4px;
+  }
+
+  .draggable{
+      touch-action: none;
+      box-sizing: border-box;
+      position: absolute;
+      &:focus{
+          outline: none;
+      }
+      &.hold{
+        outline: 5px dashed #ccc;
+      }
+      &.drag-image{
+          height: 120px;
+          width: 120px;
+          z-index: 2;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+      }
+      &.drag-qrcode{
+          height: 150px;
+          width:150px;
+          z-index: 2;
+          img{
+              width: 100%;
+              height: 100%;
+          }
+      }
+      &.drag-square{
+        height: 150px;
+        width:150px;
+        background: #000;
+        z-index: 1;
+      }
+      &.drag-text{
+          font-size: 24px;
+          padding: 2px;
+            display: inline-block;
+            z-index: 2;
+        }
+  }
+  
+  .drop-active {
+    
+  }
+  
+  .drop-target {
+    background-color: #29e;
+    opacity: 0.5;
+  }
+  
+  .drag-drop {
+    display: inline-block;
+    min-width: 40px;
+    padding: 2em 0.5em;
+  
+    color: #fff;
+    background-color: #29e;
+  
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  
+    transition: background-color 0.3s;
+  }
+  
+  .drag-drop.can-drop {
+    color: #000;
+    background-color: #4e4;
+  }
