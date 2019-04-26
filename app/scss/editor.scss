@@ -4,8 +4,7 @@
 
 .badge-element-options {
     position:absolute;
-    visibility: hidden;
-    top:0;
+    display: none;
     transition: all .3s ease;
     left:50%;
     transform: translate(-50%, -100%);
@@ -14,7 +13,7 @@
     align-items:center;
     z-index: 99;
     opacity: 1;
-    visibility: visible;
+    visibility: hidden;
     transform: translate(-50%, -100%);
     background:#efefef;
     width:100%;
@@ -26,7 +25,6 @@
 
   .badge-element {
     box-shadow: none;
-    cursor:pointer;
   }
 
   .badge-element-text:focus{

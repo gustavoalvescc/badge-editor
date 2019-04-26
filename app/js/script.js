@@ -2,6 +2,7 @@ var element = document.getElementById('grid-snap'),
     x = 0, y = 0;
 var dropzone = document.getElementById('dropzone');
 var badgeOptions = document.getElementById('badge-options');
+var currentElement;
 
 interact(".draggable[data-eltype*='object").on('tap', editStyle)
   .draggable({
@@ -43,7 +44,7 @@ interact(".draggable[data-eltype*='object").on('tap', editStyle)
     onmove: resizeMoveListener
   });
 
-  interact(".draggable[data-eltype*='text")
+  interact(".draggable[data-eltype*='text").on('tap', editStyle)
   .draggable({
     modifiers: [
       interact.modifiers.snap({
@@ -141,9 +142,19 @@ interact(".draggable[data-eltype*='object").on('tap', editStyle)
     target.classList.toggle('hold');
   }
 
+  function changeColor(color){
+    console.log(color);
+    currentElement.style.color = color;
+  }
+
+  function changeText(text){
+      console.log(text);
+    currentElement.style.fontSize = text;
+  }
+
   function editStyle(event){
     badgeOptions.style.visibility = "visible";
-    var target = event.target;
+    currentElement = event.target;
   }
 
   function resizeMoveListener(event){

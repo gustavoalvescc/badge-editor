@@ -15,7 +15,7 @@
             <div id="badge-options" class="badge-element-options">
                     <div class="badge-option">
                       <label for="textTime" class="option-label">font-size:</label>
-                      <select id="textTime">
+                      <select id="textTime" onchange="changeText(this.value)">
                                 <option>7px</option>
                                 <option> 8px</option>
                                 <option> 9px</option>
@@ -46,15 +46,16 @@
                         <label class="option-label">color:</label>
                         <button class="color-grid-preview" style="background:grey; width:50px; height:30px; cursor:pointer;"></button>
                         <div class="color-grid" style="">
-                          <label class="color-grid-color-container" contenteditable="false"><input type="radio" name="color-grid"><div class="color-grid-square" style="background:white"></div></label>
-                          <label class="color-grid-color-container" contenteditable="false"><input type="radio" name="color-grid"><div class="color-grid-square" style="background:grey"></div></label>
-                          <label class="color-grid-color-container" contenteditable="false"><input type="radio" name="color-grid"><div class="color-grid-square" style="background:black"></div></label>
-                          <label class="color-grid-color-container" contenteditable="false"><input type="radio" name="color-grid"><div class="color-grid-square" style="background:blue"></div></label>
-                          <label class="color-grid-color-container" contenteditable="false"><input type="radio" name="color-grid"><div class="color-grid-square" style="background:green"></div></label>
-                          <label class="color-grid-color-container" contenteditable="false"><input type="radio" name="color-grid"><div class="color-grid-square" style="background:yellow"></div></label>
-                          <label class="color-grid-color-container" contenteditable="false"><input type="radio" name="color-grid"><div class="color-grid-square" style="background:orange"></div></label>
-                          <label class="color-grid-color-container" contenteditable="false"><input type="radio" name="color-grid"><div class="color-grid-square" style="background:red"></div></label>
-                          <label class="color-grid-color-container" contenteditable="false"><input type="radio" name="color-grid"><div class="color-grid-square" style="background:purple"></div></label>
+                          <label class="color-grid-color-container" contenteditable="false">
+                            <input type="radio" name="color-grid" value="white" onclick="changeColor(this.value)"><div class="color-grid-square" style="background:white"></div></label>
+                          <label class="color-grid-color-container" contenteditable="false"><input onclick="changeColor(this.value)" type="radio" value="grey" name="color-grid"><div class="color-grid-square" style="background:grey"></div></label>
+                          <label class="color-grid-color-container" contenteditable="false"><input onclick="changeColor(this.value)" value="black" type="radio" name="color-grid"><div class="color-grid-square" style="background:black"></div></label>
+                          <label class="color-grid-color-container" contenteditable="false"><input onclick="changeColor(this.value)" value="blue" type="radio" name="color-grid"><div class="color-grid-square" style="background:blue"></div></label>
+                          <label class="color-grid-color-container" contenteditable="false"><input onclick="changeColor(this.value)" value="green" type="radio" name="color-grid"><div class="color-grid-square" style="background:green"></div></label>
+                          <label class="color-grid-color-container" contenteditable="false"><input onclick="changeColor(this.value)" value="yellow" type="radio" name="color-grid"><div class="color-grid-square" style="background:yellow"></div></label>
+                          <label class="color-grid-color-container" contenteditable="false"><input onclick="changeColor(this.value)" value="orange" type="radio" name="color-grid"><div class="color-grid-square" style="background:orange"></div></label>
+                          <label class="color-grid-color-container" contenteditable="false"><input onclick="changeColor(this.value)" value="red" type="radio" name="color-grid"><div class="color-grid-square" style="background:red"></div></label>
+                          <label class="color-grid-color-container" contenteditable="false"><input onclick="changeColor(this.value)" value="purple" type="radio" name="color-grid"><div class="color-grid-square" style="background:purple"></div></label>
                           </div>
                       </div>
                   </div>
