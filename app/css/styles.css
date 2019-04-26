@@ -3,7 +3,7 @@
 
 .badge-element-options {
   position: absolute;
-  top: 0;
+  display: none;
   transition: all .3s ease;
   left: 50%;
   transform: translate(-50%, -100%);
@@ -12,7 +12,7 @@
   align-items: center;
   z-index: 99;
   opacity: 1;
-  visibility: visible;
+  visibility: hidden;
   transform: translate(-50%, -100%);
   background: #efefef;
   width: 100%; }
@@ -21,8 +21,7 @@
   padding: 10px; }
 
 .badge-element {
-  box-shadow: none;
-  cursor: pointer; }
+  box-shadow: none; }
 
 .badge-element-text:focus {
   cursor: text; }
@@ -87,8 +86,10 @@
 
 .container {
   width: 420px;
-  margin: 100px auto 0; }
+  margin: 100px auto 0;
+  position: relative; }
   .container .container-drop {
+    margin-top: 100px;
     border: 5px dashed #ccc;
     border-radius: 4px; }
 

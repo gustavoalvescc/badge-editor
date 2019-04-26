@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="app/css/styles.css" />
 
     <title>Hello, world!</title>
-</head>
 
-<body>
-    <div class="container badge-canvas">
-        <div class="badge-element-options">
-            <div class="badge-option">
-                <label for="textTime" class="option-label">font-size:</label>
-                <select id="textTime">
+  </head>
+  <body>
+      <div class="container">
+            <div id="badge-options" class="badge-element-options">
+                    <div class="badge-option">
+                      <label for="textTime" class="option-label">font-size:</label>
+                      <select id="textTime" onchange="changeText(this.value)">
                                 <option>7px</option>
                                 <option> 8px</option>
                                 <option> 9px</option>
@@ -43,67 +43,66 @@
                                 <option>64px</option>
                                 <option>72px</option>
                       </select>
+                    </div>
+                    <div class="badge-option">
+                        <label class="option-label">color:</label>
+                        <button class="color-grid-preview" style="background:grey; width:50px; height:30px; cursor:pointer;"></button>
+                        <div class="color-grid" style="">
+                          <label class="color-grid-color-container" contenteditable="false">
+                            <input type="radio" name="color-grid" value="white" onclick="changeColor(this.value)"><div class="color-grid-square" style="background:white"></div></label>
+                          <label class="color-grid-color-container" contenteditable="false"><input onclick="changeColor(this.value)" type="radio" value="grey" name="color-grid"><div class="color-grid-square" style="background:grey"></div></label>
+                          <label class="color-grid-color-container" contenteditable="false"><input onclick="changeColor(this.value)" value="black" type="radio" name="color-grid"><div class="color-grid-square" style="background:black"></div></label>
+                          <label class="color-grid-color-container" contenteditable="false"><input onclick="changeColor(this.value)" value="blue" type="radio" name="color-grid"><div class="color-grid-square" style="background:blue"></div></label>
+                          <label class="color-grid-color-container" contenteditable="false"><input onclick="changeColor(this.value)" value="green" type="radio" name="color-grid"><div class="color-grid-square" style="background:green"></div></label>
+                          <label class="color-grid-color-container" contenteditable="false"><input onclick="changeColor(this.value)" value="yellow" type="radio" name="color-grid"><div class="color-grid-square" style="background:yellow"></div></label>
+                          <label class="color-grid-color-container" contenteditable="false"><input onclick="changeColor(this.value)" value="orange" type="radio" name="color-grid"><div class="color-grid-square" style="background:orange"></div></label>
+                          <label class="color-grid-color-container" contenteditable="false"><input onclick="changeColor(this.value)" value="red" type="radio" name="color-grid"><div class="color-grid-square" style="background:red"></div></label>
+                          <label class="color-grid-color-container" contenteditable="false"><input onclick="changeColor(this.value)" value="purple" type="radio" name="color-grid"><div class="color-grid-square" style="background:purple"></div></label>
+                          </div>
+                      </div>
+                  </div>
+
+          <div class="container-drop">
+                <div class="dropzone" id="dropzone">
+                    </div>
+          </div>
+        
+          <div class="badge-element draggable drag-image can-drop" style="transform: translate(18px, -250px);" data-eltype="object" data-x="18" data-y="-250">
+                <img src="https://profile.actionsprout.com/default.jpeg">
             </div>
-            <div class="badge-option">
-                <label class="option-label">color:</label>
-                <button class="color-grid-preview" style="background:grey; width:50px; height:30px; cursor:pointer;"></button>
-                <div class="color-grid" style="">
-                    <label class="color-grid-color-container" contenteditable="false"><input type="radio" name="color-grid"><div class="color-grid-square" style="background:white"></div></label>
-                    <label class="color-grid-color-container" contenteditable="false"><input type="radio" name="color-grid"><div class="color-grid-square" style="background:grey"></div></label>
-                    <label class="color-grid-color-container" contenteditable="false"><input type="radio" name="color-grid"><div class="color-grid-square" style="background:black"></div></label>
-                    <label class="color-grid-color-container" contenteditable="false"><input type="radio" name="color-grid"><div class="color-grid-square" style="background:blue"></div></label>
-                    <label class="color-grid-color-container" contenteditable="false"><input type="radio" name="color-grid"><div class="color-grid-square" style="background:green"></div></label>
-                    <label class="color-grid-color-container" contenteditable="false"><input type="radio" name="color-grid"><div class="color-grid-square" style="background:yellow"></div></label>
-                    <label class="color-grid-color-container" contenteditable="false"><input type="radio" name="color-grid"><div class="color-grid-square" style="background:orange"></div></label>
-                    <label class="color-grid-color-container" contenteditable="false"><input type="radio" name="color-grid"><div class="color-grid-square" style="background:red"></div></label>
-                    <label class="color-grid-color-container" contenteditable="false"><input type="radio" name="color-grid"><div class="color-grid-square" style="background:purple"></div></label>
-                </div>
+            <div class="badge-element draggable drag-text can-drop" contenteditable="" data-eltype="text" style="color: rgb(255, 255, 255); height: 32px; transform: translate(168px, -250px);" data-x="168" data-y="-250">
+                <span>
+                    #first-name#
+                </span>
             </div>
-        </div>
-
-        <div class="container-drop">
-            <div class="dropzone" id="dropzone">
+            <div class="badge-element draggable drag-text can-drop" contenteditable="" data-eltype="text" style="color: rgb(255, 255, 255); transform: translate(168px, -220px);" data-x="168" data-y="-220">
+                <span>
+                    #last-name#
+                </span>
             </div>
-        </div>
-
-        <div class="badge-element draggable drag-image can-drop" style="transform: translate(18px, -250px);" data-eltype="object" data-x="18" data-y="-250">
-            <img src="https://profile.actionsprout.com/default.jpeg">
-        </div>
-        <div class="badge-element draggable drag-text can-drop" contenteditable="" data-eltype="text" style="color: rgb(255, 255, 255); height: 32px; transform: translate(168px, -250px);" data-x="168" data-y="-250">
-            <span>
-                #first-name#
-            </span>
-        </div>
-        <div class="badge-element draggable drag-text can-drop" contenteditable="" data-eltype="text" style="color: rgb(255, 255, 255); transform: translate(168px, -220px);" data-x="168" data-y="-220">
-            <span>
-                #last-name#
-            </span>
-        </div>
-        <div class="badge-element draggable drag-text can-drop" contenteditable="" data-eltype="text" style="color: rgb(255, 255, 255); transform: translate(168px, -190px); font-size:16px" data-x="168" data-y="-220">
-            <span>
-                Company: #company#
-            </span>
-        </div>
-
-        <div class="badge-element draggable drag-text can-drop" contenteditable="" data-eltype="text" style="color: rgb(0, 0, 0); transform: translate(166.465px, -130px); font-size: 16px; height: 22px;" data-x="166.46484375" data-y="-130">
-            <span>
-                 #date#
-            </span>
-        </div>
-
-        <div class="badge-element draggable drag-text can-drop" contenteditable="" data-eltype="text" style="text-align: right; color: rgb(0, 0, 0); transform: translate(348px, -130px); font-size: 16px; height: 22px;" data-x="348" data-y="-130">
-            <span>
-                #time#
-            </span>
-        </div>
-        <div class="badge-element draggable drag-text can-drop" contenteditable="" data-eltype="text" style="text-align: right; color: rgb(0, 0, 0); transform: translate(18px, -100px); font-size: 16px; height: 22px;" data-x="18" data-y="-100">
-            <span>
-               Host(s): #hosts#
-            </span>
-        </div>
-        <div class="badge-element draggable drag-qrcode can-drop" data-eltype="object" style="width: 100px; height: 97.7656px; transform: translate(315px, -102.75px);" data-x="315" data-y="-102.75">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png">
-        </div>
+            <div class="badge-element draggable drag-text can-drop" contenteditable="" data-eltype="text" style="color: rgb(255, 255, 255); transform: translate(168px, -190px); font-size:16px" data-x="168" data-y="-220">
+                <span>
+                    Company: #company#
+                </span>
+            </div>
+            <div class="badge-element draggable drag-text can-drop" contenteditable="" data-eltype="text" style="color: rgb(0, 0, 0); transform: translate(166.465px, -130px); font-size: 16px; height: 22px;" data-x="166.46484375" data-y="-130">
+                <span>
+                     #date#
+                </span>
+            </div>
+            <div class="badge-element draggable drag-text can-drop" contenteditable="" data-eltype="text" style="text-align: right; color: rgb(0, 0, 0); transform: translate(348px, -130px); font-size: 16px; height: 22px;" data-x="348" data-y="-130">
+                <span>
+                    #time#
+                </span>
+            </div>
+            <div class="badge-element draggable drag-text can-drop" contenteditable="" data-eltype="text" style="text-align: right; color: rgb(0, 0, 0); transform: translate(18px, -100px); font-size: 16px; height: 22px;" data-x="18" data-y="-100">
+                <span>
+                   Host(s): #hosts#
+                </span>
+            </div>
+            <div class="badge-element draggable drag-qrcode can-drop" data-eltype="object" style="width: 100px; height: 97.7656px; transform: translate(315px, -102.75px);" data-x="315" data-y="-102.75">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png">
+            </div>
         <div class="badge-element draggable drag-square can-drop" style="transform: translate(5px, -265px); width: 413.742px; height: 117.84px;" data-eltype="object" data-x="5" data-y="-265">
         </div>
 
