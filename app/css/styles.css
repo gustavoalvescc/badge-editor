@@ -22,6 +22,8 @@
 
 .badge-element {
   box-shadow: none; }
+  .badge-element * {
+    pointer-events: none; }
 
 .badge-element-text:focus {
   cursor: text; }

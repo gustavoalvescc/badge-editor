@@ -4,6 +4,19 @@ var dropzone = document.getElementById('dropzone');
 var badgeOptions = document.getElementById('badge-options');
 var currentElement;
 
+$(document).mouseup(function(e) 
+{
+    
+    var container = $(".container");
+
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target) && container.has(e.target).length === 0) 
+    {
+        badgeOptions.style.visibility = "hidden";
+        currentElement.classList.toggle('badge-element-active');
+    }
+});
+
 interact(".draggable[data-eltype*='object").on('tap', editStyle)
   .draggable({
     modifiers: [
@@ -143,18 +156,17 @@ interact(".draggable[data-eltype*='object").on('tap', editStyle)
   }
 
   function changeColor(color){
-    console.log(color);
     currentElement.style.color = color;
   }
 
   function changeText(text){
-      console.log(text);
     currentElement.style.fontSize = text;
   }
 
   function editStyle(event){
     badgeOptions.style.visibility = "visible";
     currentElement = event.target;
+    event.target.classList.toggle('badge-element-active');
   }
 
   function resizeMoveListener(event){

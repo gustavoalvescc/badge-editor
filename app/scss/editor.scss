@@ -24,6 +24,9 @@
   }
 
   .badge-element {
+      & *{
+          pointer-events: none;
+      }
     box-shadow: none;
   }
 
