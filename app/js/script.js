@@ -22,7 +22,7 @@ interact(".draggable[data-eltype*='object").on('tap', editStyle)
     modifiers: [
       interact.modifiers.snap({
         targets: [
-          interact.createSnapGrid({ x: 30, y: 30 })
+          interact.createSnapGrid({ x: 10, y: 10 })
         ],
         range: Infinity,
         relativePoints: [ { x: 0, y: 0 } ]
@@ -49,7 +49,7 @@ interact(".draggable[data-eltype*='object").on('tap', editStyle)
 
       // minimum size
       interact.modifiers.restrictSize({
-        min: { width: 100, height: 50 },
+        min: { width: 1, height: 1 },
       }),
     ],
 
@@ -64,7 +64,7 @@ interact(".draggable[data-eltype*='object").on('tap', editStyle)
     modifiers: [
       interact.modifiers.snap({
         targets: [
-          interact.createSnapGrid({ x: 30, y: 30 })
+          interact.createSnapGrid({ x: 10, y: 10 })
         ],
         range: Infinity,
         relativePoints: [ { x: 0, y: 0 } ]
@@ -91,7 +91,7 @@ interact(".draggable[data-eltype*='object").on('tap', editStyle)
 
       // minimum size
       interact.modifiers.restrictSize({
-        min: { width: 100, height: 50 },
+        min: { width: 1, height: 1 },
       }),
     ],
 
