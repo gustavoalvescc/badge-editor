@@ -1,6 +1,7 @@
 var element = document.getElementById('grid-snap'),
     x = 0, y = 0;
 var dropzone = document.getElementById('dropzone');
+var badgeOptions = document.getElementById('badge-options');
 
 interact(".draggable[data-eltype*='object").on('tap', editStyle)
   .draggable({
@@ -141,8 +142,8 @@ interact(".draggable[data-eltype*='object").on('tap', editStyle)
   }
 
   function editStyle(event){
+    badgeOptions.style.visibility = "visible";
     var target = event.target;
-    target.style.background = "red";
   }
 
   function resizeMoveListener(event){
