@@ -113,7 +113,7 @@
   .draggable:hover {
     outline: 2px dashed #ccc; }
   .draggable:focus {
-    outline: 2px dashed #00b5ff; }
+    outline: none; }
   .draggable.hold {
     outline: 2px dashed #00b5ff; }
   .draggable.drag-image {
