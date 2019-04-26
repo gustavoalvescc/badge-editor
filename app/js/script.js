@@ -54,6 +54,8 @@ interact(".draggable[data-eltype*='object").on('tap', editStyle)
     ],
 
     inertia: true,
+    onstart: dragStartEndListener,
+    onend: dragStartEndListener,
     onmove: resizeMoveListener
   });
 
@@ -94,7 +96,9 @@ interact(".draggable[data-eltype*='object").on('tap', editStyle)
     ],
 
     inertia: true,
-    onmove: resizeMoveListener
+    onmove: resizeMoveListener,
+    onstart: dragStartEndListener,
+    onend: dragStartEndListener
   });
 
   interact('#dropzone').dropzone({
@@ -161,6 +165,10 @@ interact(".draggable[data-eltype*='object").on('tap', editStyle)
 
   function changeText(text){
     currentElement.style.fontSize = text;
+  }
+
+  function changeFontFamily(font){
+      currentElement.style.fontFamily = font;
   }
 
   function editStyle(event){

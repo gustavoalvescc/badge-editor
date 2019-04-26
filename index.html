@@ -16,6 +16,15 @@
       <div class="container badge-canvas">
             <div id="badge-options" class="badge-element-options">
                     <div class="badge-option">
+                        <label for="textTime" class="option-label">font-family:</label>
+                        <select id="textTime" onchange="changeFontFamily(this.value)">
+                            <option>Arial</option>
+                            <option> Helvetica</option>
+                            <option> Times</option>
+                            <option>Courier</option>
+                        </select>
+                    </div>
+                    <div class="badge-option">
                       <label for="textTime" class="option-label">font-size:</label>
                       <select id="textTime" onchange="changeText(this.value)">
                                 <option>7px</option>
